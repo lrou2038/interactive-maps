@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title> Popular Beaches in South Florida </title>
+  <link rel="stylesheet" href="styles/first_map.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+   <script src="scripts/first_map.js"></script>
+
+</head>
+
+<body>
+
+<h1> Popular Beaches in South Florida</h1>
+<p> by Lauren Rousseau </p>
+
+<p> The map below highlights popular beaches to go to in South Florida.</p>
+
+ <div id="map"></div>
+
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+<script>
+
+	var mymap = L.map('map').setView([25.777123, -80.210726], 11.16);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+
+	}).addTo(mymap);
+
+	L.marker([25.7907, -80.1301]).addTo(mymap);
+  L.marker([25.7635, -80.1297]).addTo(mymap);
+  L.marker([25.879250, -80.129082]).addTo(mymap);
+  L.marker([25.6895, -80.1571]).addTo(mymap);
+
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+
+  </script>
+
+
+</body>
+</html>
