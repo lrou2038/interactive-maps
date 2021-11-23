@@ -10,7 +10,7 @@
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin=""/>
 
-   <script src="scripts/first_map.js"></script>
+   <!-- <script src="scripts/first_map.js"></script> -->
 
 </head>
 
@@ -41,13 +41,15 @@
 
 	}).addTo(mymap);
 
-	L.marker([25.7907, -80.1301]).addTo(mymap);
-  L.marker([25.7635, -80.1297]).addTo(mymap);
-  L.marker([25.879250, -80.129082]).addTo(mymap);
-  L.marker([25.6895, -80.1571]).addTo(mymap);
+	var markerOne = L.marker([25.7907, -80.1301]).addTo(mymap);
+  var markerTwo = L.marker([25.7635, -80.1297]).addTo(mymap);
+  var markerThree = L.marker([25.879250, -80.129082]).addTo(mymap);
+  var markerFour = L.marker([25.6895, -80.1571]).addTo(mymap);
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-
+  markerOne.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+  markerTwo.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+  markerThree.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+  markerFour.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
   </script>
 
